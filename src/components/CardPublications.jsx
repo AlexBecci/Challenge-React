@@ -14,13 +14,13 @@ export function CardPublication({ key, title, body }) {
                     <p className="leading-relaxed mb-3">{body}</p>
 
                     <button className="px-4 py-2 bg-indigo-500 text-white rounded-full text-xl" onClick={() => document.getElementById('my_modal_2').showModal()}>Ver</button>
-                    <dialog id="my_modal_2 " className="modal rounded-md p-2">
+                    <dialog id="my_modal_2" className="modal">
                         <div className="modal-box mx-auto">
                             <h3 className="font-bold text-lg sm:mx-8">{title}</h3>
                             <p className="py-4 sm:mx-8">{body}</p>
                         </div>
                         <form method="dialog" className="modal-backdrop text-center">
-                            <button className="px-4 py-2 bg-indigo-500 rounded-full text-white text-xl">close</button>
+                            <button className="px-4 py-2 bg-indigo-500 rounded-full text-xl">close</button>
                         </form>
                     </dialog>
                 </div>
