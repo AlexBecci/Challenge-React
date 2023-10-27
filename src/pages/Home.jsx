@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { CardPublication } from "../components/CardPublications.jsx";
 import { HomeInit } from "../components/Home.jsx";
+import { Link } from "react-router-dom";
 
 
 export function Home() {
@@ -23,7 +24,6 @@ export function Home() {
 
 
 
-
     return (
         <>
             <section className="text-gray-600 body-font">
@@ -33,9 +33,10 @@ export function Home() {
 
                         {publications.map((publications) => {
                             return (
-
                                 <>
-                                    <CardPublication key={publications.userId} title={publications.title} body={publications.body} />
+
+                                    <CardPublication key={publications.id} title={publications.title} body={publications.body} />
+
                                 </>
                             )
                         })}
